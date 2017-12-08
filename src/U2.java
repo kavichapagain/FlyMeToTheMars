@@ -16,14 +16,15 @@ public class U2 extends Rocket {
 	
 	public boolean launch() {
 		calcCargo();
-		if(cargoWeight * this.launchExplo / maxWeight > this.random)
+		//System.out.println(cargoWeight * this.launchExplo / maxWeight);
+		if(cargoWeight * this.launchExplo / maxWeight < Math.random())
 			return true;
 		else
 			return false;
 	}
 
 	public boolean land() {
-		if(cargoWeight * this.landCrash / maxWeight > this.random)
+		if(cargoWeight * this.landCrash / maxWeight < Math.random())
 			return true;
 		else
 			return false;

@@ -61,7 +61,7 @@ public class Simulation extends Item {
 				oneSquad.add(f9);					//adding to the list once maxWeight is crossed.
 				f9 = new U1();						// reset f9 to fill another rocket
 				f9.currentWeight += cargo.weight;   //add current rocketWeight to f9
-				System.out.println(cargo.name + ": " + cargo.weight + " Added to f9(U1)");
+				System.out.println(cargo.name + ": " + cargo.weight + "	-> Added to f9(U1)");
 				
 			}
 			
@@ -81,7 +81,7 @@ public class Simulation extends Item {
 			int calcWeight = f9b.currentWeight + cargo.weight;
 			if (calcWeight < f9b.maxWeight) {				
 				f9b.currentWeight = calcWeight;			//update the new weight
-				System.out.println(cargo.name + ": " + cargo.weight + "Added to f9b(U2)");
+				System.out.println(cargo.name + ": " + cargo.weight + " 	-> Added to f9b(U2)");
 			}
 			else 
 				//System.out.println("Adding remaining items to another rockets");
@@ -90,6 +90,7 @@ public class Simulation extends Item {
 				f9b.currentWeight += cargo.weight;   //add current rocketWeight to f9
 				System.out.println(cargo.name + ": " + cargo.weight + " Added to f9b(U1)");
 		}
+		twoSquad.add(f9b);	//last rocket with remaining cargo
 		return twoSquad;
 	}
 	
@@ -105,15 +106,15 @@ public class Simulation extends Item {
 				}
 				else {
 					totalCost += rocket.rocketCost * 2;
-					System.out.println("Crashed in landing.");
+					System.out.println("Crashed in landing. Have to send another one.");
 				}	
 			} 
 			else{
-				System.out.println("Exlpoded on launch. have to send another one.");
+				System.out.println("Exlpoded on launch. Have to send another one.");
 				totalCost += rocket.rocketCost * 2; // add another cost of the rocket
 			}
 		}
-		System.out.println("The total budget required is " + totalCost);
+		System.out.println("The total budget required is " + totalCost + " millions");
 		return totalCost;
 	}
 

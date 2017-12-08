@@ -17,7 +17,7 @@ public class U1 extends Rocket {
 	public boolean launch() {
 		calcCargo();
 		//System.out.println(cargoWeight * this.launchExplo / maxWeight);
-		if(cargoWeight * this.launchExplo / maxWeight < this.random)
+		if(cargoWeight * this.launchExplo / maxWeight < Math.random())
 			return true;
 		else
 			return false;
@@ -26,7 +26,7 @@ public class U1 extends Rocket {
 	public boolean land() {
 		calcCargo();
 		//System.out.println(cargoWeight * this.landCrash / maxWeight);
-		if(cargoWeight * this.landCrash / maxWeight < this.random)
+		if(cargoWeight * this.landCrash / maxWeight < Math.random())
 			return true;
 		return false;
 	}

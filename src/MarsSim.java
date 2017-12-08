@@ -27,13 +27,13 @@ public class MarsSim {
 		System.out.println("\nLoading U2-phase 1");
 		ArrayList<Rocket> twoUp1 = sims.loadU2(cargoListP1);						//phase-1 loading cargo in U1
 		
-		System.out.println("\nLoading U1-phase 2");
+		System.out.println("\nLoading U2-phase 2");
 		ArrayList<Rocket> twoUp2 = sims.loadU2(cargoListP2);	
 		
-		System.out.println("\nRunning U1-phase 1");
+		System.out.println("\nRunning U2-phase 1");
 		sims.runSimulation(twoUp1);						////loading phase 1
 		
-		System.out.println("\nRunning U1-phase 2");
+		System.out.println("\nRunning U2-phase 2");
 		sims.runSimulation(twoUp2);						//phase-2 loading cargo in U1
 		
 		
